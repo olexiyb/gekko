@@ -70,11 +70,16 @@ config.postgresql = {
 config.mongodb = {
   path: 'plugins/mongodb',
   version: 0.1,
-  connectionString: 'mongodb://mongodb/gekko', // connection to mongodb server
+  connectionString: 'mongodb://localhost/gekko-production', // connection to mongodb server
   dependencies: [{
     module: 'mongojs',
-    version: '2.4.0'
+    version: '2.6.0'
   }]
+}
+
+config.adviceWriter = {
+  enabled: false,
+  muteSoft: true,
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
